@@ -3,6 +3,8 @@ package nova.core.entity.component;
 import nova.core.entity.Entity;
 import nova.core.inventory.component.InventoryPlayer;
 
+import java.util.Optional;
+
 /**
  * Basic representation of Player
  */
@@ -36,4 +38,9 @@ public abstract class Player extends Living {
 	public String getDisplayName() {
 		return getUsername();
 	}
+
+	/**
+	 * @return Returns a Optional with a Boolean that is true if player is sneaking.
+	 */
+	public abstract Optional<Boolean> isSneaking();
 }
